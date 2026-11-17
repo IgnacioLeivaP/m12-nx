@@ -1,5 +1,10 @@
 # Building Magic 2012
 
+For first-time installation, follow the [numbered README steps](../README.md#start-here).
+Prepare original files and dependencies first, build next, then copy only the generated
+installation to the SD card. Commands with `^` use Windows **cmd.exe**, not PowerShell.
+Other years and the separate Android ports are linked in the [series index](../README.md#other-magic--duels-ports-for-nintendo-switch).
+
 The installer runs the pipeline in `install/install.py`. It reads the 2012-specific
 profile `install/games/mtg12.json`; the 2013 profile and plaintext-Lua patches do not apply.
 
@@ -45,3 +50,4 @@ py -3 tools/make_release_zip.py --version v1.0.0
 The ZIP tool runs both audits again and aborts if either fails. The ZIP goes to
 `../work/release/mtg12-nx-v1.0.0.zip`, outside the public tree. It contains source and
 the installer, never a prebuilt NRO or game assets. Keep the validation status current.
+
