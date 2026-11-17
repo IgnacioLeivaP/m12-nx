@@ -1,0 +1,182 @@
+{
+  "id": "mtg12",
+  "title": "Magic: The Gathering - Duels of the Planeswalkers 2012",
+  "platform": "Xbox 360 XBLA (title 58410B3F)",
+  "title_update": "Title Update #3 (0.0.0.3 -> 0.0.3.3)",
+  "sdcard_folder": "mtg12-nx",
+  "nro": "mtg12.nro",
+  "cmake_project": "mtg12",
+  "sources": {
+    "manifest": "app/mtg12_manifest.toml",
+    "generated_dir": "app/generated",
+    "build_dir": "out/nx",
+    "host_build_dir": "out/host",
+    "pc_build_dir": "out/pc",
+    "asset_pack_dir": "out/pack",
+    "shader_dir": "out/deko3d_shaders",
+    "renut_dump": "out/renut_shader_dump",
+    "renut_switch": "out/renut_switch",
+    "renut_release": "out/renut_switch_release"
+  },
+  "requires": {
+    "xex": {
+      "name": "default.xex",
+      "sha256": "afd948d68c2513a20e1c74e63e42831390778b77ad92f66fa757faaeaba1ae11",
+      "size": 13512704
+    },
+    "xexp": {
+      "name": "default.xexp",
+      "sha256": "813ac772577f7e2343274c6d28c5f6d2071fafeeeb95db5cba32dabc09418e56",
+      "size": 995328
+    }
+  },
+  "data_files": [
+    {
+      "name": "Data_Core.wad",
+      "sha256": "794f85b90bd7211fcbbedaed162953b7ecef813028dfee1e627adadefaacc19c",
+      "size": 386272968
+    },
+    {
+      "name": "Update001.wad",
+      "sha256": "19b58c249d60db9709598857a9cefc4aff3150f3be463b2a916bd5c95c6c9f98",
+      "size": 1256320
+    }
+  ],
+  "optional_data": [
+    "Movies",
+    "Music",
+    "AvatarAwards"
+  ],
+  "base_package": {
+    "label": "the XBLA game package",
+    "sha256": "008cf5ee0740acf71289023b3201b1ea3959b66853f89da1b08ab0283a23bfb4",
+    "size": 545050624
+  },
+  "dlc_packages": [
+    {
+      "id": 1,
+      "label": "Expansion Pack",
+      "package": "6C32FE6642E7DF5CD5FEF653D0F424F8832591CB58",
+      "sha256": "93ca14d81d935b863967d1ddda6d6289af218cc249f387ca30f2712fb6e9d9a7",
+      "size": 42070016
+    },
+    {
+      "id": 2,
+      "label": "Deck Pack 1",
+      "package": "96674EF1CDE85A92257DF63ADC762025E9E95CF258",
+      "sha256": "7bd1ef4822c15290f8b85dac196ef8bff1bbeba5179a0af86c49f4ed5217d513",
+      "size": 31703040
+    },
+    {
+      "id": 3,
+      "label": "Deck Pack 2",
+      "package": "72401DD0A014255A68AB5576E519C81811F3D2CF58",
+      "sha256": "3ee03e4699a9c7d25d0f465bf7859e0fc5227be877854b49c383cc299ac36e6e",
+      "size": 31703040
+    },
+    {
+      "id": 4,
+      "label": "Deck Pack 3",
+      "package": "A3A048E9CA99B634FDCF4964AABDF4191471761E58",
+      "sha256": "25f3a99698ba5b454e984fd88a1299c99e09d041e482d63b2637894e3f1e5fe8",
+      "size": 31780864
+    },
+    {
+      "id": 8,
+      "label": "Multiplayer Pack",
+      "package": "29686E73D07AE1332001BFE5A47B0E87B34CA77D58",
+      "sha256": "0d93f487a7249c059a2e37bbcbc19294b5d69a4c5cb055ef08777e46911fa775",
+      "size": 31637504
+    }
+  ],
+  "lua": {
+    "note": "Only operations are distributed: no text and no bytecode of the game's scripts. Each jump is applied to the user's own script by tools/luapatch.py.",
+    "modules": [
+      {
+        "module": "menus.main_menu.main_menu_carousel",
+        "from": "Update001.wad",
+        "entry": "UPDATE001/DATA_ALL_PLATFORMS/DATA_REQUIRED/LUBE/SKIND12/MENUS/MAIN_MENU/MAIN_MENU_CAROUSEL.LOB",
+        "out": "menus.main_menu.main_menu_carousel.luac",
+        "operations": [
+          {
+            "function": "0",
+            "pc": 31,
+            "target": 49
+          },
+          {
+            "function": "0",
+            "pc": 108,
+            "target": 126
+          },
+          {
+            "function": "0",
+            "pc": 144,
+            "target": 162
+          },
+          {
+            "function": "0",
+            "pc": 162,
+            "target": 180
+          },
+          {
+            "function": "0.12",
+            "pc": 0,
+            "target": 24
+          },
+          {
+            "function": "0.13",
+            "pc": 0,
+            "target": 24
+          }
+        ]
+      },
+      {
+        "module": "menus.dlg.content_enumeration",
+        "from": "Data_Core.wad",
+        "entry": "DATA_CORE/DATA_ALL_PLATFORMS/DATA_REQUIRED/LUBE/SKIND12/MENUS/DLG/CONTENT_ENUMERATION.LOB",
+        "out": "menus.dlg.content_enumeration.luac",
+        "operations": [
+          {
+            "function": "0.5",
+            "pc": 4,
+            "target": 21
+          }
+        ]
+      }
+    ],
+    "settings": {
+      "from": "Data_Core.wad",
+      "entry": "DATA_CORE/DATA_ALL_PLATFORMS/DATA_REQUIRED/LUBE/SKIND12/MENUS/HELP_OPTIONS/SETTINGS/BASIC.LOB",
+      "out": "menus.help_options.settings.basic.lua"
+    }
+  },
+  "icons": {
+    "from": "Data_Core.wad",
+    "prefixes": [
+      "DATA_CORE/DATA_ALL_PLATFORMS/DATA_REQUIRED/LUBE/SKIND12/TEXTURES/",
+      "DATA_CORE/DATA_ALL_PLATFORMS/DATA_REQUIRED/LUBE/SKIND12/TEXTURES/BUTTONS/",
+      "DATA_CORE/DATA_X360/DATA_SHARED/ART_ASSETS/TEXTURES/"
+    ],
+    "also": [
+      "DATA_CORE/DATA_X360/DATA_SHARED/ART_ASSETS/FONTS/SYMBOLS.TDX"
+    ],
+    "base_wad": "Update001.wad",
+    "styles": [
+      {
+        "style": "ps",
+        "out": "mtg12_buttons_ps.bin"
+      },
+      {
+        "style": "switch",
+        "out": "mtg12_buttons_switch.bin"
+      }
+    ]
+  },
+  "switch_config": {
+    "toml": "mtg12.toml",
+    "keys": {
+      "mtg12_language": "",
+      "input_xbox_layout": false
+    }
+  }
+}
